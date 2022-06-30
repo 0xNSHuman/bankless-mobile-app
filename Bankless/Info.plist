@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>BANKLESS_ACADEMY_BASE_URL</key>
+    <string>https://${BANKLESS_ACADEMY_BASE_PATH}</string>
 	<key>BANKLESS_ACADEMY_API_BASE_URL</key>
 	<string>https://${BANKLESS_ACADEMY_API_BASE_PATH}</string>
 	<key>BANKLESS_ACADEMY_LESSONS_BASE_URL</key>
@@ -88,5 +90,20 @@
 	<string>${YOUTUBE_API_ACCESS}</string>
 	<key>YOUTUBE_API_BASE_URL</key>
 	<string>https://${YOUTUBE_API_BASE_PATH}</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>banklessacademy.com</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSTemporaryExceptionMinimumTLSVersion</key>
+                <string>TLSv1.1</string>
+            </dict>
+        </dict>
+    </dict>
 </dict>
 </plist>

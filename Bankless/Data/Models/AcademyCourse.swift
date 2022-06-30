@@ -32,6 +32,12 @@ struct AcademyCourse: Codable {
     let knowledgeRequirements: String?
     
     var sections: [Section] { return [] }
+    
+    func absoluteLink(for relativeLink: URL) -> URL {
+        return URL.init(
+            string: Environment.banklessAcademyBaseURL + relativeLink.absoluteString
+        )!
+    }
 }
 
 extension AcademyCourse {

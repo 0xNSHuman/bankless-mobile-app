@@ -57,7 +57,9 @@ final class AcademyCourseViewModel: BaseViewModel {
     
     func transform(input: Input) -> Output {
         return Output(
-            backgroundImageURL: .just(academyCourse.lessonImageLink),
+            backgroundImageURL: .just(
+                academyCourse.absoluteLink(for: academyCourse.lessonImageLink)
+            ),
             title: .just(academyCourse.name),
             description: .just(academyCourse.description),
             difficulty: .just(academyCourse.difficulty.title),

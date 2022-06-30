@@ -124,7 +124,9 @@ final class AcademyCourseDetailsViewModel: BaseViewModel {
             title: .just(academyCourse.name),
             description: .just(academyCourse.description),
             detailViewModels: .just(detailViewModels),
-            collectibleImageURL: .just(academyCourse.poapImageLink),
+            collectibleImageURL: .just(
+                academyCourse.absoluteLink(for: academyCourse.poapImageLink)
+            ),
             sectionNavViewModel: .just(sectionNavVM)
         )
     }
