@@ -1,3 +1,13 @@
+## v1.0.2 - 2022-06-30 - Beta
+
+### Updated
+
+- Re-host the app in another AppStore account.
+
+### Fixed
+
+- Broken links to Bankless Academy assets due to API updates.
+
 ## v1.0.1 - 2022-06-25 - Beta
 
 ### Updated
